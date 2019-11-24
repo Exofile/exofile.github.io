@@ -17,7 +17,7 @@ function frameAuth(){
 }
 
 var apiKey = "775dca647cdc4959952ac8089d7a9f04";
-
+/*
 localStorage.setItem("tabbed", true);
 
 window.addEventListener("storage", function(e){
@@ -31,6 +31,7 @@ if(localStorage.getItem("tabbed")){
 	// Save authentication code to LocalStorage and close the tab
 	window.close();
 };
+*/
 /*
 POST https://www.bungie.net/Platform/App/OAuth/Token/ HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
