@@ -25,6 +25,7 @@
 				</div>
 				<div id="bungieImage">
 				<img src="https://www.bungie.net/common/destiny2_content/icons/d41dd918d42681c5b0ad00880274b22c.png" alt="bungieImage" width="200" height="200">
+				<button id="authButton">Press me!</button>
 				</div>
 			</div>
 			<div id="information">
@@ -33,6 +34,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/examTrial.js"></script>
+	<script src="js/frameVault.js"></script>
 </body>
 </html>
