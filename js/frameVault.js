@@ -7,7 +7,7 @@ var imageFiles = ["montyHallBlue.png", "montyHallGreen.png", "montyHallRed.png",
 var bungieImage = "url(https://www.bungie.net/common/destiny2_content/icons/d41dd918d42681c5b0ad00880274b22c.png)";
 
 var images = document.querySelectorAll(".image");
-var authButton = document.querySelectorAll("#authButton");
+var authButton = document.querySelector("#authButton");
 
 window.addEventListener("click", frameAuth);
 
