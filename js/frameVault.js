@@ -88,7 +88,7 @@ setTimeout(move, time);
 
 function frameAuth(){
 	console.log("Authenticating..");
-	window.open("https://www.bungie.net/en/OAuth/Authorize?client_id=31149&response_type=code");
+    window.location = "https://www.bungie.net/en/OAuth/Authorize?client_id=31149&response_type=code";
 }
 
 
