@@ -7,9 +7,9 @@ var imageFiles = ["montyHallBlue.png", "montyHallGreen.png", "montyHallRed.png",
 var bungieImage = "url(https://www.bungie.net/common/destiny2_content/icons/d41dd918d42681c5b0ad00880274b22c.png)";
 
 var images = document.querySelectorAll(".image");
-var authButton = document.querySelector("#authButton");
+var authButtonEl = document.querySelector("#authButton");
 
-window.addEventListener("click", frameAuth);
+authButtonEl.addEventListener("click", frameAuth);
 
 function frameAuth(){
 	console.log("Authenticating..");
@@ -17,6 +17,18 @@ function frameAuth(){
 }
 
 var apiKey = "775dca647cdc4959952ac8089d7a9f04";
+
+var authToken = new XMLHttpRequest();
+authToken.open("POST", "https://www.bungie.net/platform/app/oauth/token/", HTTP/1.1);
+authToken.setRequestHeader("X-API-Key", apiKey);
+
+authToken.onreadystatechange = function(){
+	if(this.readyState === 4 && this.status === 200){
+		var json = JSON.parse(this.responseText);
+		console.log(json.Response); //Gjallarhorn
+	}
+}
+
 /*
 localStorage.setItem("tabbed", true);
 
@@ -36,7 +48,7 @@ if(localStorage.getItem("tabbed")){
 POST https://www.bungie.net/Platform/App/OAuth/Token/ HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 
-client_id="31149"&grant_type=authorization_code&code={auth-code}
+client_id="31149"&grant_type=authorization_code&code=d5716250896f1185563d5b633f486f94
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://www.bungie.net/platform/Destiny/Manifest/InventoryItem/1274330687/", true);
