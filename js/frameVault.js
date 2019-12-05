@@ -11,11 +11,6 @@ var authButtonEl = document.querySelector("#authButton");
 
 authButtonEl.addEventListener("click", frameAuth);
 
-function frameAuth(){
-	console.log("Authenticating..");
-	window.open("https://www.bungie.net/en/OAuth/Authorize?client_id=31149&response_type=code");
-}
-
 var apiKey = "775dca647cdc4959952ac8089d7a9f04";
 
 var authToken = new XMLHttpRequest();
@@ -87,6 +82,12 @@ for(var i = 0; i < images.length; i++){
 }
 
 setTimeout(move, time);
+
+function frameAuth(){
+	console.log("Authenticating..");
+	window.open("https://www.bungie.net/en/OAuth/Authorize?client_id=31149&response_type=code");
+}
+
 
 function move(){
 	if(indexVisibleImage === images.length - 1){
