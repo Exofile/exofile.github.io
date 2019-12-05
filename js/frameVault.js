@@ -14,7 +14,7 @@ authButtonEl.addEventListener("click", frameAuth);
 var apiKey = "775dca647cdc4959952ac8089d7a9f04";
 
 var authToken = new XMLHttpRequest();
-authToken.open("POST", "https://www.bungie.net/platform/app/oauth/token/", HTTP/1.1);
+authToken.open("POST", "https://www.bungie.net/platform/app/oauth/token/", true);
 authToken.setRequestHeader("X-API-Key", apiKey);
 
 authToken.onreadystatechange = function(){
