@@ -9,7 +9,7 @@ var bungieImage = "url(https://www.bungie.net/common/destiny2_content/icons/d41d
 var images = document.querySelectorAll(".image");
 var authButtonEl = document.querySelector("#authButton");
 
-// authButtonEl.addEventListener("click", frameAuth);
+authButtonEl.addEventListener("click", frameAuth);
 
 var apiKey = "775dca647cdc4959952ac8089d7a9f04";
 /*
