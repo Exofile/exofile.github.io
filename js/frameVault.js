@@ -11,7 +11,7 @@ var images = document.querySelectorAll(".image");
 var authButtonEl = document.querySelector("#authButton");
 var authCodeEl = document.querySelector("#authCode");
 var emblemImageEl = document.querySelector("#emblemImage");
-var statTableEl = document.getElementById("#datagrid");
+var statTableEl = document.querySelector("#statTable");
 
 authButtonEl.addEventListener("click", frameAuth);
 authCodeEl.addEventListener("click", frameCode);
@@ -46,9 +46,12 @@ function frameCode() {
             var json = JSON.parse(this.responseText);
             console.log(json.Response.character.data.light); // remove later!
             document.getElementById("emblemImage").src = "https://www.bungie.net" + json.Response.character.data.emblemBackgroundPath;
-            // var mobility = json.Response.character.data.stats.2996146975;
-            // console.log(mobility);
-            statTableEl.rows[0].cells[1].innerHTML = "test";
+            statTableEl.rows[0].cells[1].innerHTML = json.Response.character.data.stats[2996146975];
+            statTableEl.rows[1].cells[1].innerHTML = json.Response.character.data.stats[392767087];
+            statTableEl.rows[2].cells[1].innerHTML = json.Response.character.data.stats[1943323491];
+            statTableEl.rows[3].cells[1].innerHTML = json.Response.character.data.stats[1735777505];
+            statTableEl.rows[4].cells[1].innerHTML = json.Response.character.data.stats[144602215];
+            statTableEl.rows[5].cells[1].innerHTML = json.Response.character.data.stats[4244567218];
         }
     }
     xhr.onprogress = function (event) {
