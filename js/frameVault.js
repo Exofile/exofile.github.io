@@ -2,7 +2,7 @@ var indexVisibleImage = 0;
 var indexNextImage;
 var time = 3000;
 
-var http = require("http");
+// var http = require("http");
 var adr = window.location.href;
 var q = url.parse(adr, true);
 
