@@ -47,6 +47,7 @@ function frameCode() {
             console.log(json.Response.character.data.light); // remove later!
             document.getElementById("emblemImage").src = "https://www.bungie.net" + json.Response.character.data.emblemBackgroundPath;
             // var mobility = json.Response.character.data.stats.2996146975;
+            // console.log(mobility);
             statTableEl.rows[0].cells[1].innerHTML = "test";
         }
     }
